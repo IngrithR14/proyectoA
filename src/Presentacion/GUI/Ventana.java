@@ -286,4 +286,5 @@ public class Ventana extends JFrame implements ActionListener, ChangeListener {
     public void stateChanged(ChangeEvent e) {
 
     }
+
 }

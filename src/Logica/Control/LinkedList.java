@@ -31,6 +31,15 @@ public class LinkedList<T> {
     }
     //-->
     public void imprimir(){
+        NodeList<T> aux = head;
+        while (aux!=null){
+            System.out.println(aux.getInfo());
+            aux=aux.getNext();
+        }
+        System.out.println();
+    }
+    //<--
+    public void imprimirReverso(){
         NodeList<T> aux = last;
         while (aux!=null){
             System.out.println(aux.getInfo());
