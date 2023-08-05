@@ -1,7 +1,7 @@
 package Presentacion;
 
 
-import Logica.Control.LinkedList;
+import Logica.Controlador.LinkedList;
 import Presentacion.GUI.Ventana;
 
 public class Main {
