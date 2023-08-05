@@ -1,6 +1,8 @@
 package Presentacion.GUI;
 
 
+import Logica.Controlador;
+
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
@@ -157,10 +159,11 @@ public class Ventana extends JFrame implements ActionListener, ChangeListener {
         this.boton16.setBackground(new Color(210, 210, 210));
         this.boton16.addActionListener(this);
 
-        this.boton17 = new JButton(".");
+        this.boton17 = new JButton("CL");
         this.boton17.setBounds(60, 330, 60, 60);
         this.boton17.setFont(font1);
         this.boton17.setBackground(new Color(210, 210, 210));
+        this.boton17.setForeground(Color.RED);
         this.boton17.addActionListener(this);
 
         this.boton18 = new JButton("=");
@@ -269,11 +272,14 @@ public class Ventana extends JFrame implements ActionListener, ChangeListener {
             txt.setText(txt.getText() + "0");
         }
         if (e.getSource() == this.boton17) {
-            txt.setText(txt.getText() + ".");
+            this.dispose();
         }
         if (e.getSource() == this.boton18) {
             linea1.setText(txt.getText());
-            txt.setText(":)");
+
+            Controlador controlador= new Controlador();
+            controlador.setText(txt.getText());
+            txt.setText(controlador.controlador()+"ssss");
 
         }
         if (e.getSource() == this.boton19) {
