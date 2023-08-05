@@ -40,7 +40,7 @@ public class Ventana extends JFrame implements ActionListener, ChangeListener {
 
 
     public Ventana() {
-        Font font = new Font("Arial", Font.PLAIN, 30);
+        Font font = new Font("Arial", Font.PLAIN, 20);
         Font font1 = new Font("Arial", Font.PLAIN, 20);
 
         this.linea1 = new JTextField();
@@ -230,7 +230,13 @@ public class Ventana extends JFrame implements ActionListener, ChangeListener {
             txt.setText("");
         }
         if (e.getSource() == this.boton3) {
-            txt.setText(txt.getText());
+            if (linea1.getText().equals("")) {
+
+            }else {
+                txt.setText(linea1.getText());
+                linea1.setText("");
+            }
+
         }
         if (e.getSource() == this.boton4) {
             txt.setText(txt.getText() + "7");
