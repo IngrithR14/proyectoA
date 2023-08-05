@@ -18,11 +18,24 @@ public class Controlador {
         String texto = text;
         int tamano;
         LinkedList<String> linkedList = new LinkedList<String>();
-        tamano=texto.length();
+        LinkedList<String> linkedListParentesis = new LinkedList<String>();
+        tamano = texto.length();
         for (int i = 0; i < tamano; i++) {
             linkedList.addNode(String.valueOf(texto.charAt(i)));
+            String letra = String.valueOf(texto.charAt(i));
+            if (letra.equals("(")) {
+                linkedListParentesis.addNode("(");
+            }
+            if (letra.equals(")")) {
+                linkedListParentesis.deleteNode("(");
+            }
         }
-        return "";
+       if (linkedListParentesis.getSize()<=0){
+
+       }else {
+           texto="Error: Parentesis Incompletos";
+       }
+        return texto;
     }
 
 

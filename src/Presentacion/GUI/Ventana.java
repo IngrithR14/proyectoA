@@ -276,10 +276,9 @@ public class Ventana extends JFrame implements ActionListener, ChangeListener {
         }
         if (e.getSource() == this.boton18) {
             linea1.setText(txt.getText());
-
             Controlador controlador= new Controlador();
             controlador.setText(txt.getText());
-            txt.setText(controlador.controlador()+"ssss");
+            txt.setText(controlador.controlador());
 
         }
         if (e.getSource() == this.boton19) {

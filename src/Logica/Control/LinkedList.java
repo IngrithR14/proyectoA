@@ -26,6 +26,28 @@ public class LinkedList<T> {
         size++;
     }
 
+    public void deleteNode(T info){
+        if (head==null){
+            return;
+        }
+        if (head.getInfo().equals(info)){
+            head = head.getNext();
+            size--;
+            return;
+        }
+        NodeList<T> aux = head;
+        NodeList<T> prev = null;
+        while (aux != null && !aux.getInfo().equals(info)) {
+            prev = aux;
+            aux = aux.getNext();
+        }
+        if (aux==null){
+            return;
+        }
+        prev.setNext( aux.getNext());
+        size--;
+    }
+
     public int getSize() {
         return size;
     }
