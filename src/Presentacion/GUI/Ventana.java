@@ -221,10 +221,10 @@ public class Ventana extends JFrame implements ActionListener, ChangeListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.boton) {
-            txt.setText(txt.getText() + "(");
+            txt.setText(txt.getText() + " ( ");
         }
         if (e.getSource() == this.boton1) {
-            txt.setText(txt.getText() + ")");
+            txt.setText(txt.getText() + " ) ");
         }
         if (e.getSource() == this.boton2) {
             txt.setText("");
@@ -248,7 +248,7 @@ public class Ventana extends JFrame implements ActionListener, ChangeListener {
             txt.setText(txt.getText() + "9");
         }
         if (e.getSource() == this.boton7) {
-            txt.setText(txt.getText() + "/");
+            txt.setText(txt.getText() + " / ");
         }
         if (e.getSource() == this.boton8) {
             txt.setText(txt.getText() + "4");
@@ -260,7 +260,7 @@ public class Ventana extends JFrame implements ActionListener, ChangeListener {
             txt.setText(txt.getText() + "6");
         }
         if (e.getSource() == this.boton11) {
-            txt.setText(txt.getText() + "*");
+            txt.setText(txt.getText() + " * ");
         }
         if (e.getSource() == this.boton12) {
             txt.setText(txt.getText() + "1");
@@ -272,7 +272,7 @@ public class Ventana extends JFrame implements ActionListener, ChangeListener {
             txt.setText(txt.getText() + "3");
         }
         if (e.getSource() == this.boton15) {
-            txt.setText(txt.getText() + "-");
+            txt.setText(txt.getText() + " - ");
         }
         if (e.getSource() == this.boton16) {
             txt.setText(txt.getText() + "0");
@@ -284,11 +284,12 @@ public class Ventana extends JFrame implements ActionListener, ChangeListener {
             linea1.setText(txt.getText());
             Controlador controlador= new Controlador();
             controlador.setText(txt.getText());
-            txt.setText(controlador.controlador());
+            txt.setText(controlador.parentesis());
+            controlador.controlador();
 
         }
         if (e.getSource() == this.boton19) {
-            txt.setText(txt.getText() + "+");
+            txt.setText(txt.getText() + " + ");
         }
 
     }

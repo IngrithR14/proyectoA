@@ -1,5 +1,7 @@
 package Logica.Modelo;
 
+import Logica.Control.LinkedList;
+
 public class TreeNode<T>{
 
     private T info;
@@ -34,4 +36,8 @@ public class TreeNode<T>{
     public void setRigth(TreeNode<T> rigth) {
         this.rigth = rigth;
     }
+
+
+
+
 }
