@@ -10,6 +10,7 @@ public class BinaryTree<T> {
     private Comparator<T> comparator;
     private TreeNode<T> root;
     private List<T> list;
+ public int size;
     public BinaryTree(Comparator<T> comparator) {
         this.comparator = comparator;
         root = null;
@@ -21,6 +22,7 @@ public class BinaryTree<T> {
     public void addNode(T info) {
         if (isEmpety()) {
             root = new TreeNode<>(info);
+            size++;
         } else {
             TreeNode<T> newNode = new TreeNode<>(info);
             TreeNode<T> aux = root;
@@ -35,6 +37,7 @@ public class BinaryTree<T> {
             } else {
                 ant.setRigth((new TreeNode<>(info)));
             }
+            size++;
         }
     }
 
@@ -79,5 +82,8 @@ public class BinaryTree<T> {
             proSort(node.getRigth());
             list.add(node.getInfo());
         }
+    }
+    public int getSize() {
+        return size;
     }
 }
