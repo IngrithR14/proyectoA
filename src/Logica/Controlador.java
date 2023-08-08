@@ -26,42 +26,34 @@ public class Controlador {
     }
 
     public void controlador() {
-        LinkedList<String> numeros = new LinkedList<String>();
+        LinkedList<String> symbolo = new LinkedList<String>();
         NodeList<String> aux = linkedList.head;
         NodeList<String> aux1 = linkedList.head;
-        System.out.println("linkedList = " + linkedList.getSize());
+
         for (int i = 0; i < linkedList.getSize(); i++) {
             if (aux.getInfo().equals("(")) {
-                numeros.addNode("(");
+                symbolo.addNode("(");
             }
             if (aux.getInfo().equals(")")) {
-                numeros.addNode(")");
+                symbolo.addNode(")");
             }
             if (aux.getInfo().equals("+")) {
-                numeros.addNode("+");
+                symbolo.addNode("+");
             }
             if (aux.getInfo().equals("-")) {
-                numeros.addNode("-");
+                symbolo.addNode("-");
             }
             if (aux.getInfo().equals("/")) {
-                numeros.addNode("/");
+                symbolo.addNode("/");
             }
             if (aux.getInfo().equals("*")) {
-                numeros.addNode("*");
+                symbolo.addNode("*");
             }
-            for (int j = 0; j < linkedList.getSize() - 1; j++) {
-                String nodoActual = linkedList.head.getInfo();
-                String nodoSiguiente = linkedList.head.getNext().getInfo();
-                if (esNumero(nodoActual) && esNumero(nodoSiguiente)) {
-                    String nuevoNodo = nodoActual + nodoSiguiente;
-                    numeros.addNode(nuevoNodo);
-                }
 
-            }
             aux = aux.getNext();
         }
 
-        numeros.imprimir();
+        symbolo.imprimir();
     }
 
 
@@ -91,8 +83,9 @@ public class Controlador {
                 linkedList.addNode(parte);
             }        }
         linkedList.imprimir();
-        /*for (int i = 0; i < tamano; i++) {
 
+        for (int i = 0; i < tamano; i++) {
+            String letra = String.valueOf(texto.charAt(i));
 
             if (letra.equals("(")) {
                 linkedListParentesis.addNode("(");
@@ -107,7 +100,7 @@ public class Controlador {
         if (linkedListParentesis.getSize() != 0) {
             info = "Parentesis Incompletos";
         }
-*/
+
         return info;
     }
 
