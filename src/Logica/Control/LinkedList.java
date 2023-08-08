@@ -2,7 +2,7 @@ package Logica.Control;
 
 import Logica.Modelo.NodeList;
 
-public class LinkedList<T> {
+public class LinkedList<T>  {
     public NodeList<T> head;
     private NodeList<T> last;
     private int size;

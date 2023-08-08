@@ -1,8 +1,6 @@
 package Presentacion;
 
 
-import Logica.Control.BinaryTree;
-import Logica.Control.LinkedList;
 import Presentacion.GUI.Ventana;
 
 public class Main {

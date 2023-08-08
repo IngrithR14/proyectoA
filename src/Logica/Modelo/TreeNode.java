@@ -1,7 +1,5 @@
 package Logica.Modelo;
 
-import Logica.Control.LinkedList;
-
 public class TreeNode<T>{
 
     private T info;

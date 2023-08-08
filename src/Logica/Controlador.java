@@ -8,7 +8,8 @@ public class Controlador {
     public String info;
 
     public LinkedList<String> linkedList = new LinkedList<String>();
-
+    public LinkedList<String> symbolo = new LinkedList<String>();
+    public java.util.LinkedList<Integer> listas = new java.util.LinkedList<Integer>();
     public String getInfo() {
         return info;
     }
@@ -26,7 +27,7 @@ public class Controlador {
     }
 
     public void controlador() {
-        LinkedList<String> symbolo = new LinkedList<String>();
+
         NodeList<String> aux = linkedList.head;
         NodeList<String> aux1 = linkedList.head;
 
@@ -38,25 +39,42 @@ public class Controlador {
                 symbolo.addNode(")");
             }
             if (aux.getInfo().equals("+")) {
-                symbolo.addNode("+");
+                symbolo.addNode("3");
             }
             if (aux.getInfo().equals("-")) {
-                symbolo.addNode("-");
+                symbolo.addNode("4");
             }
             if (aux.getInfo().equals("/")) {
-                symbolo.addNode("/");
+                symbolo.addNode("2");
             }
             if (aux.getInfo().equals("*")) {
-                symbolo.addNode("*");
+                symbolo.addNode("1");
             }
 
             aux = aux.getNext();
+
         }
 
         symbolo.imprimir();
+        ordenar(symbolo);
+        listas.toString();
+
     }
 
+    public void ordenar(LinkedList<String> lista) {
+        int temp = 0;
+        int n = symbolo.getSize();
 
+        for (int i = 0; i < n; i++) {
+            for (int j = 1; j < (n - i); j++) {
+                if (listas.get(j - 1) > listas.get(j)) {
+                    temp = listas.get(j - 1);
+                    listas.set(j - 1, listas.get(j));
+                    listas.set(j, temp);
+                }
+            }
+        }
+    }
     public boolean esNumero(String cadena) {
         try {
             Integer.parseInt(cadena);
