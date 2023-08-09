@@ -8,7 +8,7 @@ public class Main {
         System.out.println("Hello world!");
 
 
-         Ventana ventana = new Ventana();
+        Ventana ventana = new Ventana();
 
         //BinaryTree<Integer> num = new BinaryTree<Integer>((o1, o2) -> Integer.compare(o1, o2));
 

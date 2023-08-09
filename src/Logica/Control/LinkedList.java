@@ -2,6 +2,9 @@ package Logica.Control;
 
 import Logica.Modelo.NodeList;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class LinkedList<T>  {
     public NodeList<T> head;
     private NodeList<T> last;
@@ -68,13 +71,18 @@ public class LinkedList<T>  {
     }
 
     //-->
-    public void imprimir() {
+    public List imprimir() {
+        ArrayList<T> lista = new ArrayList<>();
         NodeList<T> aux = head;
         while (aux != null) {
             System.out.println(aux.getInfo());
+            lista.add(aux.getInfo());
             aux = aux.getNext();
+
+
         }
         System.out.println();
+        return lista;
     }
 
     //<--

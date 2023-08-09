@@ -10,7 +10,7 @@ public class BinaryTree<T> {
     private Comparator<T> comparator;
     private TreeNode<T> root;
     private List<T> list;
- public int size;
+    public int size;
     public BinaryTree(Comparator<T> comparator) {
         this.comparator = comparator;
         root = null;
@@ -63,9 +63,9 @@ public class BinaryTree<T> {
 
     private void inSort(TreeNode<T> node) {
         if (node != null) {
-           inSort(node.getLeft());
+            inSort(node.getLeft());
             list.add(node.getInfo());
-           inSort(node.getRigth());
+            inSort(node.getRigth());
         }
     }
 
